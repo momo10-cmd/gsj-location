@@ -1,3 +1,14 @@
+import urusImg from '../assets/images/fleet_lamborghini_urus_1791504578957.jpg';
+import tahoeImg from '../assets/images/fleet_chevrolet_tahoe_2025_1791504691736.jpg';
+import classeVImg from '../assets/images/fleet_mercedes_classe_v_1791504683454.jpg';
+import pradoImg from '../assets/images/fleet_toyota_prado_1791504598750.jpg';
+import bestuneImg from '../assets/images/fleet_bestune_t55_1791504673280.jpg';
+import kiaK5Img from '../assets/images/fleet_kia_k5_1791504627151.jpg';
+import buickImg from '../assets/images/fleet_buick_encore_gx_1791504589937.jpg';
+import changanImg from '../assets/images/fleet_changan_hunter_1791504608281.jpg';
+import hiaceImg from '../assets/images/fleet_toyota_hiace_vip_1791504618449.jpg';
+import sprinterImg from '../assets/images/fleet_mercedes_sprinter_1791504700321.jpg';
+
 export interface Vehicle {
   id: string;
   name: string;
@@ -40,7 +51,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     pricePerDayUSD: 650,
     pricePerDayFCFA: 400000,
     highlightCard: true,
-    image: '/src/assets/images/fleet_lamborghini_urus_1791504578957.jpg',
+    image: urusImg,
     tagline: 'Le Super SUV ultime par excellence : puissance bestiale de 650 ch et prestige absolu à Abidjan',
     specs: {
       power: '650 ch V8 Biturbo',
@@ -61,7 +72,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Grand SUV',
     pricePerDayUSD: 230,
     pricePerDayFCFA: 140000,
-    image: '/src/assets/images/fleet_chevrolet_tahoe_2025_1791504691736.jpg',
+    image: tahoeImg,
     tagline: 'Le tout nouveau SUV américain 2025 grand confort 7 places avec prestance imposante',
     specs: {
       power: '420 ch V8',
@@ -81,7 +92,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Van & Minibus',
     pricePerDayUSD: 200,
     pricePerDayFCFA: 120000,
-    image: '/src/assets/images/fleet_mercedes_classe_v_1791504683454.jpg',
+    image: classeVImg,
     tagline: 'Van VIP grand luxe finition calandre Maybach avec salon intérieur cuir pour délégations',
     specs: {
       power: '237 ch 300d',
@@ -101,7 +112,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Grand SUV',
     pricePerDayUSD: 180,
     pricePerDayFCFA: 110000,
-    image: '/src/assets/images/fleet_toyota_prado_1791504598750.jpg',
+    image: pradoImg,
     tagline: 'La référence incontournable de robustesse, de confort et de sécurité en Côte d’Ivoire',
     specs: {
       power: '204 ch D-4D',
@@ -121,7 +132,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Grand SUV',
     pricePerDayUSD: 90,
     pricePerDayFCFA: 55000,
-    image: '/src/assets/images/fleet_bestune_t55_1791504673280.jpg',
+    image: bestuneImg,
     tagline: 'Crossover moderne et technologique au design racé pour vos déplacements urbains à Abidjan',
     specs: {
       power: '169 ch Turbo',
@@ -141,7 +152,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Berline',
     pricePerDayUSD: 110,
     pricePerDayFCFA: 65000,
-    image: '/src/assets/images/fleet_kia_k5_1791504627151.jpg',
+    image: kiaK5Img,
     tagline: 'Berline sportive et statutaire au look audacieux, idéale pour rendez-vous d’affaires et cérémonies',
     specs: {
       power: '180 ch Turbo',
@@ -161,7 +172,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Grand SUV',
     pricePerDayUSD: 100,
     pricePerDayFCFA: 60000,
-    image: '/src/assets/images/fleet_buick_encore_gx_1791504589937.jpg',
+    image: buickImg,
     tagline: 'SUV compact américain élégant et silencieux, offrant une conduite souple et raffinée',
     specs: {
       power: '155 ch Turbo',
@@ -181,7 +192,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Pick-Up',
     pricePerDayUSD: 120,
     pricePerDayFCFA: 75000,
-    image: '/src/assets/images/fleet_changan_hunter_1791504608281.jpg',
+    image: changanImg,
     tagline: 'Pick-up double cabine 4x4 robuste et spacieux, prêt pour vos missions d’affaires et chantiers',
     specs: {
       power: '150 ch Turbo Diesel',
@@ -201,7 +212,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Van & Minibus',
     pricePerDayUSD: 160,
     pricePerDayFCFA: 95000,
-    image: '/src/assets/images/fleet_toyota_hiace_vip_1791504618449.jpg',
+    image: hiaceImg,
     tagline: 'Minibus VIP 15 places climatisé grand confort pour délégations, navettes et cérémonies',
     specs: {
       power: '177 ch 2.8 D-4D',
@@ -221,7 +232,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
     category: 'Van & Minibus',
     pricePerDayUSD: 240,
     pricePerDayFCFA: 150000,
-    image: '/src/assets/images/fleet_mercedes_sprinter_1791504700321.jpg',
+    image: sprinterImg,
     tagline: 'Minibus VIP d’apparat haut de gamme pour délégations ministérielles et transferts de prestige',
     specs: {
       power: '190 ch CDI',
@@ -242,7 +253,7 @@ export const CAR_CATEGORIES: CategoryInfo[] = [
     id: 'supercar',
     name: 'Prestige &\nSupercar',
     subtitle: 'Lamborghini Urus à Abidjan',
-    image: '/src/assets/images/fleet_lamborghini_urus_1791504578957.jpg',
+    image: urusImg,
     count: 1,
     categoryKey: 'Supercar',
   },
@@ -250,7 +261,7 @@ export const CAR_CATEGORIES: CategoryInfo[] = [
     id: 'grand-suv',
     name: 'Grands SUV\n& 4x4 Luxe',
     subtitle: 'Chevrolet Tahoe 2025, Prado, Bestune, Buick',
-    image: '/src/assets/images/fleet_chevrolet_tahoe_2025_1791504691736.jpg',
+    image: tahoeImg,
     count: 4,
     categoryKey: 'Grand SUV',
   },
@@ -258,7 +269,7 @@ export const CAR_CATEGORIES: CategoryInfo[] = [
     id: 'van-minibus',
     name: 'Vans & Minibus\nVIP Exécutif',
     subtitle: 'Mercedes Classe V Maybach, Sprinter, Hiace 15 pl.',
-    image: '/src/assets/images/fleet_mercedes_classe_v_1791504683454.jpg',
+    image: classeVImg,
     count: 3,
     categoryKey: 'Van & Minibus',
   },
@@ -266,7 +277,7 @@ export const CAR_CATEGORIES: CategoryInfo[] = [
     id: 'berlines-pickup',
     name: 'Berline &\nPick-Up 4x4',
     subtitle: 'Kia K5 Sport & Double Cabine Changan Hunter',
-    image: '/src/assets/images/fleet_changan_hunter_1791504608281.jpg',
+    image: changanImg,
     count: 2,
     categoryKey: 'Berline_PickUp',
   },

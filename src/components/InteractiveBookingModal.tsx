@@ -186,6 +186,14 @@ export const InteractiveBookingModal: React.FC<InteractiveBookingModalProps> = (
                   alt={vehicle.name}
                   className="w-36 h-24 object-contain"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.fallback) {
+                      target.dataset.fallback = 'true';
+                      const filename = target.src.split('/').pop()?.split('?')[0];
+                      if (filename) target.src = `/images/${filename}`;
+                    }
+                  }}
                 />
                 <div className="flex-1">
                   <div className="flex items-center gap-2">

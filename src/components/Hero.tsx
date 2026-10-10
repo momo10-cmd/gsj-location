@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Calendar, Clock, ArrowRightLeft, Sparkles, Search } from 'lucide-react';
 import { POPULAR_LOCATIONS } from '../data/fleetData';
+import heroUrusImg from '../assets/images/hero_urus_prestige_1791504709687.jpg';
 
 export type BookingMode = 'Distance' | 'À l’heure' | 'Forfait Journée';
 
@@ -49,10 +50,17 @@ export const Hero: React.FC<HeroProps> = ({ onSearch }) => {
       {/* Arrière-plan Lamborghini Urus & Pavillon de Prestige */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_urus_prestige_1791504709687.jpg"
+          src={heroUrusImg}
           alt="Lamborghini Urus GSJ Location Abidjan"
           className="w-full h-full object-cover object-center scale-[1.01]"
           referrerPolicy="no-referrer"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.dataset.fallback) {
+              target.dataset.fallback = 'true';
+              target.src = '/images/hero_urus_prestige_1791504709687.jpg';
+            }
+          }}
         />
         {/* Filtres de dégradé pour lisibilité parfaite */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-black/35" />

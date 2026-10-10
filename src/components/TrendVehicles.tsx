@@ -140,6 +140,14 @@ export const TrendVehicles: React.FC<TrendVehiclesProps> = ({
                       alt={car.name}
                       className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-md"
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallback) {
+                          target.dataset.fallback = 'true';
+                          const filename = target.src.split('/').pop()?.split('?')[0];
+                          if (filename) target.src = `/images/${filename}`;
+                        }
+                      }}
                     />
                   </div>
 

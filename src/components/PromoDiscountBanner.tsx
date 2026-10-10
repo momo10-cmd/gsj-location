@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { Vehicle } from '../data/fleetData';
+import urusPromoImg from '../assets/images/fleet_lamborghini_urus_1791504578957.jpg';
 
 interface PromoDiscountBannerProps {
   featuredVehicle?: Vehicle;
@@ -8,6 +9,7 @@ interface PromoDiscountBannerProps {
 }
 
 export const PromoDiscountBanner: React.FC<PromoDiscountBannerProps> = ({
+  featuredVehicle,
   onBookFeatured,
 }) => {
   return (
@@ -51,10 +53,17 @@ export const PromoDiscountBanner: React.FC<PromoDiscountBannerProps> = ({
             {/* Visuel Urus */}
             <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900/60">
               <img
-                src="/src/assets/images/fleet_lamborghini_urus_1791504578957.jpg"
+                src={featuredVehicle?.image || urusPromoImg}
                 alt="Lamborghini Urus à Abidjan - GSJ Location"
                 className="w-full h-auto object-cover max-h-[340px] sm:max-h-[380px]"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.fallback) {
+                    target.dataset.fallback = 'true';
+                    target.src = '/images/fleet_lamborghini_urus_1791504578957.jpg';
+                  }
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-transparent to-slate-950/20" />
             </div>

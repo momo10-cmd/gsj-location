@@ -92,6 +92,14 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
                       alt={car.name}
                       className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform"
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallback) {
+                          target.dataset.fallback = 'true';
+                          const filename = target.src.split('/').pop()?.split('?')[0];
+                          if (filename) target.src = `/images/${filename}`;
+                        }
+                      }}
                     />
                   </div>
                   <div>

@@ -55,6 +55,14 @@ export const CarCategories: React.FC<CarCategoriesProps> = ({
                     alt={cat.name}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallback) {
+                        target.dataset.fallback = 'true';
+                        const filename = target.src.split('/').pop()?.split('?')[0];
+                        if (filename) target.src = `/images/${filename}`;
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/75" />
                 </div>

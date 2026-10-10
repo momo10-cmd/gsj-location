@@ -2,5 +2,7 @@
   "name": "GSJ Location Abidjan - Location de Voitures de Prestige & SUV",
   "description": "Location de voitures de prestige à Abidjan : Lamborghini Urus, Chevrolet Tahoe 2025, Mercedes Classe V Maybach, Prado, Bestune, Sprinter, Hiace. Service VIP avec ou sans chauffeur.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
