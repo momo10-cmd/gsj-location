@@ -44,7 +44,8 @@ export const Header: React.FC<HeaderProps> = ({
           <GSJLogo
             size="sm"
             onClick={() => onNavigateSection('hero')}
-            className="hover:opacity-90 transition-opacity scale-90 sm:scale-100 origin-left"
+            className="hover:opacity-90 transition-opacity"
+            imgClassName="h-11 sm:h-13 md:h-14 w-auto max-w-[160px] sm:max-w-[200px]"
           />
         </div>
 
